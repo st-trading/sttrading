@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Award, FileText, Compass } from "lucide-react";
-import bannerImg from "../assets/images/cosmetics_raw_materials_banner_1783564904793.jpg";
-import bgImg from "../assets/images/aesthetic_white_flower_bg_1783650042758.jpg";
+
+const bannerImg = "/images/cosmetics_raw_materials_banner_1783564904793.jpg";
+const bgImg = "/images/aesthetic_white_flower_bg_1783650042758.jpg";
 
 interface HomeProps {
   onViewChange: (view: string, subView?: string) => void;
@@ -15,7 +16,7 @@ export default function Home({ onViewChange }: HomeProps) {
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       {/* Soft, dreamy high-key light overlay matching the attached image vibe */}
-      <div className="absolute inset-0 bg-white/75 backdrop-blur-[3px] z-0" />
+      <div className="absolute inset-0 bg-white/90 backdrop-blur-[2px] z-0" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         

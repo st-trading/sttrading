@@ -1,9 +1,8 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Award, FileText, Compass } from "lucide-react";
-
-const bannerImg = "/images/cosmetics_raw_materials_banner_1783564904793.jpg";
-const bgImg = "/images/aesthetic_white_flower_bg_1783650042758.jpg";
+import bannerImg from "../assets/images/cosmetics_raw_materials_banner_1783564904793.jpg";
+import bgImg from "../assets/images/aesthetic_white_flower_bg_1783650042758.jpg";
 
 interface HomeProps {
   onViewChange: (view: string, subView?: string) => void;
@@ -15,8 +14,8 @@ export default function Home({ onViewChange }: HomeProps) {
       className="py-16 min-h-[80vh] flex flex-col justify-center relative bg-cover bg-center"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
-      {/* Soft, dreamy high-key light overlay matching the attached image vibe */}
-      <div className="absolute inset-0 bg-white/90 backdrop-blur-[2px] z-0" />
+      {/* Very light overlay to preserve the soft, dreamy high-key light of the uploaded image without blocking it */}
+      <div className="absolute inset-0 bg-white/20 z-0" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         
@@ -33,18 +32,18 @@ export default function Home({ onViewChange }: HomeProps) {
                 referrerPolicy="no-referrer"
               />
               {/* Soft white gradient overlay to blend description beautifully with background */}
-              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-white/10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
             </div>
 
             {/* Top Badge */}
             <div className="relative z-10 p-6 flex justify-end items-start">
-              <span className="text-[10px] font-bold text-slate-500 font-mono bg-white/90 px-3 py-1 rounded-full border border-slate-200/80 shadow-sm">
+              <span className="text-[10px] font-bold text-slate-500 font-mono bg-white/95 px-3 py-1 rounded-full border border-slate-200/80 shadow-sm">
                 ST-TR-2026
               </span>
             </div>
 
             {/* Bottom Brand Caption Overlap */}
-            <div className="relative z-10 p-8 sm:p-12 pt-24">
+            <div className="relative z-10 p-8 sm:p-12 pt-24 bg-gradient-to-t from-white/95 via-white/80 to-transparent">
               <div className="flex items-center space-x-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-indigo-600 animate-pulse" />
                 <span className="text-xs font-bold text-indigo-600 tracking-wider uppercase">

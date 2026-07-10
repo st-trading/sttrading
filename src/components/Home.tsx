@@ -29,6 +29,7 @@ export default function Home({ onViewChange }: HomeProps) {
                 src={bannerImg}
                 alt="Cosmetics Raw Materials - ST Trading"
                 className="w-full h-full object-cover opacity-90 group-hover:scale-[1.01] transition-transform duration-[1.5s] ease-out"
+                referrerPolicy="no-referrer"
               />
               {/* Soft white gradient overlay to blend description beautifully with background */}
               <div className="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent" />
